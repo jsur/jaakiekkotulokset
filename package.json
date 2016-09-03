@@ -1,7 +1,7 @@
 {
   "name": "ajanvaraus",
   "version": "1.0.0",
-  "description": "A web app for booking exercise classes.",
+  "description": "A web app for booking classes.",
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
