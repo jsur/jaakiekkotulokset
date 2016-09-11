@@ -1,0 +1,16 @@
+.login-img {
+	width: 150px;
+	display: block;
+	margin: 40px auto 40px auto;
+}
+
+.login-btn {
+	width: 8%;
+	margin: 0 46%;	
+}
+
+.form-control {
+	max-width: 300px;
+	display: block;
+	margin: 40px auto 40px auto;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ajanvaraus</title>
+	<link rel="stylesheet" href="/styles/main.css" type="text/css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="header">
+		<h1 class="text-center">Lorem ipsum</h1>
+		<p class="text-center">Viikko 40</p>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-8 day-label">Maanantai
+			</div>
+			<div class="col-xs-4 classes-sum"> Tunteja: x kpl
+			</div>
+			<button class="expand glyphicon glyphicon-chevron-down
+" data-toggle="collapse" data-target="#collapseitem"></button>
+			<div class="collapse" id="collapseitem">
+				<div class="col-xs-8 ex-name">Lenkki 60min</div>
+				<div class="col-xs-4 ex-status">
+					<input type="checkbox" id="c1" name="inout">
+					<label for="c1">IN<span></span></label>	
+				</div>
+				<div class="col-xs-8 ex-name">Kahvakuula</div>
+				<div class="col-xs-4 ex-status">
+					<input type="checkbox" id="c2" name="inout">
+					<label for="c2">IN<span></span></label>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
