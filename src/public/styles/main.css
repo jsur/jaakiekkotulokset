@@ -3,7 +3,6 @@ input[type="checkbox"] {
     display:none;
 }
 
-
 input[type="checkbox"] + label span {
     display:inline-block;
     width:19px;
@@ -18,7 +17,6 @@ input[type="checkbox"]:checked + label span {
     display: inline-block;
     background:url(success.svg) left top no-repeat;
 }
-
 
 .header {
 	background-color: #36D7B7;
