@@ -1,15 +1,8 @@
-#Web app for booking classes
-
-MongoDB 3.2.8  
+#Finhockey scores for OKK Tankki
+ 
 Express 4.14.0  
-Node 4.4.7  
-Mongoose 4.6.0  
+Node 4.4.7
+Riot.js 2.6  
 
 Pug for templates  
-Bootstrap 
-  
-#Tools
-
-nodemon for server restarts  
-Postman for http request tests  
-iron-node for debugging  
+Bootstrap

@@ -1,11 +1,9 @@
 'use strict'
 
 var express = require('express');
-var router = require('./api');
+var router = require('./api/router.js');
 
 var app = express();
-
-require('./database');
 
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
