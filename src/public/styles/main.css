@@ -12,6 +12,18 @@ h1 {
 	padding: 30px;
 }
 
-.okklogo {
-
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -30px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.footer, .page-wrap:after {
+  height: 30px; 
+}
+.footer {
+  background: orange;
 }
