@@ -1,28 +1,35 @@
 $(function() {
 
-	var count = $(".kaljasakko-sum").val();
+	
 
 	$(".kaljasakko-add").click(function(){
 
+		var index = $(this).parent().index() + 1;
+		var count = $("#kaljasakko-sum" + index).val();
 		count++;
-		$(".kaljasakko-sum").val(count);
+		$("#kaljasakko-sum" + index).val(count);
 	
 	});
 
-	$(".kaljasakko-remove").click(function(){
+	$(".kaljasakko-subtract").click(function(){
 
+		var index = $(this).parent().index() + 1;
+		var count = $("#kaljasakko-sum" + index).val();
 		count--;
-		$(".kaljasakko-sum").val(count);
+		$("#kaljasakko-sum" + index).val(count);
 	
 	});
 
 	$(".kaljasakko-name").change(function(){
 		
-		var num = $(".kaljasakko").length;
-		console.log(num);
-		newNum  = new Number(num + 1);
-		console.log(newNum);
-		$("#sakko" + num).clone(true).attr("id", "sakko" + newNum).appendTo(".kaljasakot-list");
+		var num = $(".kaljasakko").length,
+		newNum  = new Number(num + 1),
+		newElem = $("#sakko" + num).clone(true).attr("id", "sakko" + newNum).appendTo(".kaljasakot-list");
+
+		newElem.find(".kaljasakko-name").attr("id", "kaljasakko-name" + newNum).val("");
+		newElem.find(".kaljasakko-subtract").attr("id", "kaljasakko-subtract" + newNum);
+		newElem.find(".kaljasakko-sum").attr("id", "kaljasakko-sum" + newNum).val("");
+		newElem.find(".kaljasakko-add").attr("id", "kaljasakko-add" + newNum);
 	
 	});
 });

@@ -8,9 +8,9 @@ body(id='bootstrap-override')
 		div(class='form-inline text-center')
 			div(class='kaljasakot-list form-group text-center')
 				div(class='kaljasakko' id="sakko1")
-					input(class='kaljasakko-name form-control' type='text' placeholder='Lisää nimi..')
-					button(class='kaljasakko-remove btn btn-danger') -
-					input(class='kaljasakko-sum form-control' type='text' disabled placeholder=0)
-					button(class='kaljasakko-add btn btn-success') +
+					input(class='kaljasakko-name form-control' id="kaljasakko-name1" type='text' placeholder='Lisää nimi..')
+					button(class='kaljasakko-subtract btn btn-danger' id="kaljasakko-subtract1") -
+					input(class='kaljasakko-sum form-control' id="kaljasakko-sum1" type='text' disabled placeholder=0)
+					button(class='kaljasakko-add btn btn-success' id="kaljasakko-add1") +
 	include includes/footer.pug
 	script(src="js/kaljasakot.js")
