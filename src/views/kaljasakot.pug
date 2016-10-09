@@ -5,9 +5,12 @@ body(id='bootstrap-override')
 		div(class='header')
 			img(class='okklogo' src='img/okkimg.jpeg' height='80' width='130')
 			h1 Kaljasakot
-	kaljasakot
-	script(type="riot/tag" src="kaljasakot.tag")
-	script(src="https://cdn.jsdelivr.net/riot/2.6/riot+compiler.min.js")
-	script riot.mount('kaljasakot')
+		div(class='form-inline text-center')
+			div(class='kaljasakot-list form-group text-center')
+				div(class='kaljasakko' id="sakko1")
+					input(class='kaljasakko-name form-control' type='text' placeholder='Lisää nimi..')
+					button(class='kaljasakko-remove btn btn-danger') -
+					input(class='kaljasakko-sum form-control' type='text' disabled placeholder=0)
+					button(class='kaljasakko-add btn btn-success') +
 	include includes/footer.pug
-	script(src='/js/kaljasakot.js')
+	script(src="js/kaljasakot.js")

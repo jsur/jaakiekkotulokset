@@ -2,13 +2,17 @@
 	padding: 30px 60px;
 }
 
-.kaljasakot-name {
+.kaljasakot-list div {
+	padding-top: 10px;
+}
+
+.kaljasakko-name {
 	max-width: 350px;
 	margin-right: 40px;
 	padding: 20px;
 }
 
-.kaljasakot-sum {
+.kaljasakko-sum {
 	max-width: 60px;
 	margin-left: 5px;
 	margin-right: 5px;
@@ -16,15 +20,15 @@
 	text-align: center;
 }
 
-.kaljasakot-sum:disabled {
+.kaljasakko-sum:disabled {
 	background: #dddddd;
 	padding: 20px;
 }
 
-.kaljasakot-remove {
+.kaljasakko-remove {
 	padding: 10px 20px;
 }
 
-.kaljasakot-add {
+.kaljasakko-add {
 	padding: 10px 20px;
 }
