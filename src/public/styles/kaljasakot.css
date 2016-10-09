@@ -29,6 +29,11 @@
 	padding: 10px 20px;
 }
 
+.kaljasakko-subtract:disabled {
+	background: #dddddd;
+	border-color: #dddddd;
+}
+
 .kaljasakko-add {
 	padding: 10px 20px;
 }
