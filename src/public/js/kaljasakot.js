@@ -5,15 +5,11 @@ $(function() {
 		var index = $(this).parent().index() + 1;
 		var count = $("#kaljasakko-sum" + index).val();
 
-		console.log(count);
-
 		if (count + 1 > 0) {
 			$("#kaljasakko-subtract" + index).prop("disabled", false);
-		} 
-
-		count++;
-		$("#kaljasakko-sum" + index).val(count);
-	
+		}
+			count++;
+			$("#kaljasakko-sum" + index).val(count);
 	});
 
 	$(".kaljasakko-subtract").click(function(){
@@ -24,9 +20,8 @@ $(function() {
 		if (count <= 0) {
 			$("#kaljasakko-subtract" + index).prop("disabled", true);
 		} else {
-
-		count--;
-		$("#kaljasakko-sum" + index).val(count);
+			count--;
+			$("#kaljasakko-sum" + index).val(count);
 		}
 
 	});
@@ -43,4 +38,23 @@ $(function() {
 		newElem.find(".kaljasakko-add").attr("id", "kaljasakko-add" + newNum);
 
 	});
+
+	$(".header-menu").slicknav({
+		
+	});
+
+	//$('.slicknav_menu').prepend('<a href="http://localhost:3001"><img class="okklogo" src="img/okkimg.jpeg" alt="Website Logo" /></a>');
+
 });
+
+
+
+
+
+
+
+
+
+
+
+

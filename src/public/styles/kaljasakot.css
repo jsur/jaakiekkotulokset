@@ -1,3 +1,7 @@
+.header-kaljasakot {
+	display: block;
+}
+
 .kaljasakot-list {
 	padding: 30px 60px;
 }
@@ -7,7 +11,7 @@
 }
 
 .kaljasakko-name {
-	max-width: 350px;
+	max-width: 188px;
 	margin-right: 40px;
 	padding: 20px;
 }
@@ -37,3 +41,15 @@
 .kaljasakko-add {
 	padding: 10px 20px;
 }
+
+@media (max-width: 768px) {
+
+	.kaljasakko-name {
+		display: inline;
+	}
+	
+	.kaljasakko-sum {
+		display: inline;
+	}
+}
+

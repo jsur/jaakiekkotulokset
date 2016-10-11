@@ -1,6 +1,14 @@
 html
-	head
+	head(class='header-kaljasakot')
 		title OKK Tankki
+		ul(class="header-menu")
+			li
+				a(href="http://localhost:3001") Sarjatulokset
+			li
+				a(href="http://localhost:3001/kaljasakot") Kaljasakot
 		link(rel="stylesheet" href="/styles/main.css" type="text/css")
 		link(href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet")
 		link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+		<link rel="stylesheet" href="/styles/slicknav.min.css"/>
+		div(class='header')
+			img(class='okklogo' src='img/okkimg.jpeg' height='80' width='130')

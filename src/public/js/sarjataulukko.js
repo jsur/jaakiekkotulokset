@@ -1,0 +1,7 @@
+$(function() {
+
+	$(".header-menu").slicknav({
+		
+	});
+
+});

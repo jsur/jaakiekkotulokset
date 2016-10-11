@@ -13,17 +13,49 @@ h1 {
 }
 
 .page-wrap {
-  min-height: 100%;
+  min-height: 70%;
   /* equal to footer height */
-  margin-bottom: -30px; 
+  margin-bottom: -30px;
 }
+
 .page-wrap:after {
   content: "";
   display: block;
 }
+
 .footer, .page-wrap:after {
   height: 30px; 
 }
+
 .footer {
-  background: orange;
+  background: white;
 }
+
+.header-menu {
+  display: none;
+}
+
+.okklogo {
+  width: 130px;
+  height: 80px;
+}
+
+.slicknav_menu {
+  float: right;
+  background: white !important;
+}
+
+.slicknav_btn {
+  width: 100px;
+}
+
+.slicknav_nav a {
+  color: black !important;
+}
+
+/*@media (max-width: 768px) {
+  .okklogo {
+    display: none;
+  }
+}*/
+

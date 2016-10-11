@@ -1,8 +1,8 @@
 include includes/header.pug
+h1 Sarjataulukko
 body(id='bootstrap-override')
 	div(class='container-fluid')
-		div(class='header')
-			img(class='okklogo' src='img/okkimg.jpeg' height='80' width='130')
-			h1 Sarjataulukko
 		div
 			include includes/hockeydata.pug
+			include includes/footer.pug
+	script(src="js/sarjataulukko.js")
