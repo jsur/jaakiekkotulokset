@@ -44,8 +44,17 @@
 
 @media (max-width: 768px) {
 
+	.container-fluid {
+		padding: 0px;
+	}
+
+	.kaljasakot-list {
+		padding: 0px;
+	}
+
 	.kaljasakko-name {
 		display: inline;
+		margin: 0px 5px 0px 0px;
 	}
 	
 	.kaljasakko-sum {
