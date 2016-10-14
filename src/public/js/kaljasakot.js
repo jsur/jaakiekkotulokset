@@ -2,7 +2,7 @@ $(function() {
 
 	$(".kaljasakko-add").click(function(){
 
-		var index = $(this).parent().index() + 1;
+		var index = $(this).parent().index();
 		var count = $("#kaljasakko-sum" + index).val();
 
 		if (count + 1 > 0) {
@@ -14,7 +14,7 @@ $(function() {
 
 	$(".kaljasakko-subtract").click(function(){
 
-		var index = $(this).parent().index() + 1;
+		var index = $(this).parent().index();
 		var count = $("#kaljasakko-sum" + index).val();
 		
 		if (count <= 0) {

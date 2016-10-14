@@ -6,7 +6,7 @@ var router = require('./api/router.js');
 var app = express();
 
 require('./database');
-require('./seed');
+//require('./seed');
 
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');

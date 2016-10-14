@@ -1,8 +1,10 @@
 #Finhockey scores for OKK Tankki
  
-Express 4.14.0  
-Node 4.4.7  
-Riot.js 2.6  
+Express  
+Node  
+jQuery  
+MongoDB  
 
 Pug for templates  
-Bootstrap
+Bootstrap  
+Mongoose  

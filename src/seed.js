@@ -8,6 +8,7 @@ var kaljasakot = [{
 }
 ];
 
+/*
 kaljasakot.forEach(function(kaljasakko, index) {
 	Kaljasakko.find({'name': kaljasakko}, function(err, kaljasakot) {
 		if(!err && !kaljasakot.length) {
@@ -15,7 +16,7 @@ kaljasakot.forEach(function(kaljasakko, index) {
 		};
 	});
 });
-
+*/
 
 var kaljatesti = new Kaljasakko({ name: 'Julius', amount: 7 });
 console.log(kaljatesti.name); // 'Julius'

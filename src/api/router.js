@@ -4,6 +4,8 @@ const express = require('express');
 const router = express.Router();
 const dataservice = require('./dataservice.js')
 const _ = require('lodash');
+const Kaljasakko = require('../models/kaljasakko_collection.js');
+
 
 router.get('/', function(req, res) {
     dataservice.getFinhockeyData().then(function(data) {
@@ -15,7 +17,10 @@ router.get('/', function(req, res) {
 });
 
 router.get('/kaljasakot', function(req, res) { 
-    res.render('kaljasakot');
+    Kaljasakko.collection.find().toArray(function(err, items) {
+        res.render('kaljasakot', { items: items });	
+        console.log(items);
+        })
     });
 
 module.exports = router;
