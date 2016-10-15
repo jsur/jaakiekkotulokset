@@ -11,10 +11,10 @@ body(id='bootstrap-override')
 						button(class='kaljasakko-subtract btn btn-danger' id="kaljasakko-subtract" + i) -
 						input(class='kaljasakko-sum form-control' id="kaljasakko-sum" + i type='text' disabled value=items[i].amount)
 						button(class='kaljasakko-add btn btn-success' id="kaljasakko-add" + i) +
-				div(class='kaljasakko' id="sakko")
-				input(class='kaljasakko-name form-control' id="kaljasakko-name1" type='text' placeholder='Lisää nimi..')
-				button(class='kaljasakko-subtract btn btn-danger' id="kaljasakko-subtract1") -
-				input(class='kaljasakko-sum form-control' id="kaljasakko-sum1" type='text' disabled placeholder=0)
-				button(class='kaljasakko-add btn btn-success' id="kaljasakko-add1") +
+				div(class='kaljasakko' id="sakko" + items.length)
+					input(class='kaljasakko-name form-control' id="kaljasakko-name" + items.length type='text' placeholder='Lisää nimi..')
+					button(class='kaljasakko-subtract btn btn-danger' id="kaljasakko-subtract" + items.length) -
+					input(class='kaljasakko-sum form-control' id="kaljasakko-sum" + items.length type='text' disabled placeholder=0)
+					button(class='kaljasakko-add btn btn-success' id="kaljasakko-add" + items.length) +
 		include includes/footer.pug
 		script(src="js/kaljasakot.js")

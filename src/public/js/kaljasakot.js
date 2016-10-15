@@ -23,28 +23,21 @@ $(function() {
 			count--;
 			$("#kaljasakko-sum" + index).val(count);
 		}
-
 	});
 
 	$(".kaljasakko-name").change(function(){
 		
-		var num = $(".kaljasakko").length,
-		newNum  = new Number(num + 1),
-		newElem = $("#sakko" + num).clone(true).attr("id", "sakko" + newNum).appendTo(".kaljasakot-list");
-
-		newElem.find(".kaljasakko-name").attr("id", "kaljasakko-name" + newNum).val("");
-		newElem.find(".kaljasakko-subtract").attr("id", "kaljasakko-subtract" + newNum);
-		newElem.find(".kaljasakko-sum").attr("id", "kaljasakko-sum" + newNum).val("");
-		newElem.find(".kaljasakko-add").attr("id", "kaljasakko-add" + newNum);
+		var num = new Number($(".kaljasakko").length);
+		//Find the largest #sakko and clone it
+		var newElem = $("#sakko" + (num - 1)).clone(true).attr("id", "sakko" + num).appendTo(".kaljasakot-list");
+		newElem.find(".kaljasakko-name").attr("id", "kaljasakko-name" + num).val("");
+		newElem.find(".kaljasakko-subtract").attr("id", "kaljasakko-subtract" + num);
+		newElem.find(".kaljasakko-sum").attr("id", "kaljasakko-sum" + num).val("");
+		newElem.find(".kaljasakko-add").attr("id", "kaljasakko-add" + num);
 
 	});
 
-	$(".header-menu").slicknav({
-		
-	});
-
-	//$('.slicknav_menu').prepend('<a href="http://localhost:3001"><img class="okklogo" src="img/okkimg.jpeg" alt="Website Logo" /></a>');
-
+	$(".header-menu").slicknav({});
 });
 
 
