@@ -1,10 +1,10 @@
 #Finhockey scores for OKK Tankki
  
+jQuery  
 Express  
 Node  
-jQuery  
 MongoDB  
 
-Pug for templates  
+Pug  
 Bootstrap  
 Mongoose  
