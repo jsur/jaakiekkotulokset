@@ -6,7 +6,7 @@ body(id='bootstrap-override')
 		div(class='form-inline text-center page-wrap')
 			div(class='kaljasakot-list form-group text-center')
 				each value, i in items
-					div(class='kaljasakko' id="sakko" + i)
+					div(class='kaljasakko' id="sakko" + i object-id=items[i]._id)
 						input(class='kaljasakko-name form-control' id="kaljasakko-name" + i  type='text' value=items[i].name)
 						button(class='kaljasakko-subtract btn btn-danger' id="kaljasakko-subtract" + i) -
 						input(class='kaljasakko-sum form-control' id="kaljasakko-sum" + i type='text' disabled value=items[i].amount)

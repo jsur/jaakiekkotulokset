@@ -1,17 +1,20 @@
 'use strict'
 
-var express = require('express');
-var router = require('./api/router.js');
+const express = require('express');
+const router = require('./api/router.js');
+const parser = require('body-parser');
 
-var app = express();
+const app = express();
 
 require('./database');
-//require('./seed');
 
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
 
 app.use('/', express.static(__dirname + '/public'));
+app.use(parser.urlencoded({extended: true}));
+app.use(parser.json());
+
 app.use('/', router);
 
 app.listen(process.env.PORT || 3000, function() {
