@@ -7,7 +7,7 @@ const _ = require('lodash');
 const Kaljasakko = require('../models/kaljasakko_collection.js');
 
 
-router.get('/', function(req, res) {
+router.get('/sarjataulukko', function(req, res) {
     dataservice.getFinhockeyData().then(function(data) {
     	var data1 = _.orderBy(data.teams, [function(o) { return parseInt(o.Ranking, 10); }], ['asc']); 
         res.render('index', { data1: data1 });
@@ -16,13 +16,13 @@ router.get('/', function(req, res) {
     });
 });
 
-router.get('/kaljasakot', function(req, res) { 
+router.get('/', function(req, res) { 
     Kaljasakko.collection.find().toArray(function(err, items) {
         res.render('kaljasakot', { items: items });	
         })
     });
 
-router.post('/kaljasakot', function(req, res) {
+router.post('/', function(req, res) {
     var kaljasakko = req.body;
     Kaljasakko.create(kaljasakko, function(err, kaljasakko) {
         if(err) {
@@ -33,7 +33,7 @@ router.post('/kaljasakot', function(req, res) {
         })
     });
 
-router.put('/kaljasakot/:id', function(req, res) {
+router.put('/:id', function(req, res) {
     var id = req.params.id;
     var kaljasakko = req.body;
     if(kaljasakko && kaljasakko._id !== id) {

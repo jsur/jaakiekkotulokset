@@ -106,7 +106,7 @@ putSakko =
 
 	function (url, id, i) { $.ajax({
 		type: "PUT",
-		url: url + '/' + id,
+		url: url + id,
 		dataType: "json",
 		data: {
 			_id: id,
