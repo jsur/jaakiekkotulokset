@@ -1,3 +1,12 @@
+/*Bootstrap overrides*/
+
+#bootstrap-override .kaljasakko-reason {
+	width: 90%;
+	display: none;
+}
+
+/*Class styles*/
+
 .header-kaljasakot {
 	display: block;
 }
@@ -41,6 +50,20 @@
 .kaljasakko-add {
 	padding: 10px 20px;
 }
+
+.kaljasakko-reason-toggle {
+	display: block;
+	padding: 5px;
+	font-size: 1.3em;
+	transition: transform .3s ease-in;
+}
+
+.kaljasakko-reason-toggle.rotate-180 {
+	transform: rotate(180deg);
+}
+
+
+/*Media queries*/
 
 @media (max-width: 768px) {
 

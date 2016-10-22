@@ -8,26 +8,26 @@ var url = window.location.href
 
 	$(".kaljasakko-add").click(function(){
 
-		var index = $(this).parent().index();
-		var count = $("#kaljasakko-sum" + index).val();
+		var i = $(this).parent().index();
+		var count = $("#kaljasakko-sum" + i).val();
 
 		if (count + 1 > 0) {
-			$("#kaljasakko-subtract" + index).prop("disabled", false);
+			$("#kaljasakko-subtract" + i).prop("disabled", false);
 		}
 			count++;
-			$("#kaljasakko-sum" + index).val(count);
+			$("#kaljasakko-sum" + i).val(count);
 	});
 
 	$(".kaljasakko-subtract").click(function(){
 
-		var index = $(this).parent().index();
-		var count = $("#kaljasakko-sum" + index).val();
+		var i = $(this).parent().index();
+		var count = $("#kaljasakko-sum" + i).val();
 		
 		if (count <= 0) {
-			$("#kaljasakko-subtract" + index).prop("disabled", true);
+			$("#kaljasakko-subtract" + i).prop("disabled", true);
 		} else {
 			count--;
-			$("#kaljasakko-sum" + index).val(count);
+			$("#kaljasakko-sum" + i).val(count);
 		}
 	});
 
@@ -45,6 +45,8 @@ var url = window.location.href
 			newElem.find(".kaljasakko-subtract").attr("id", "kaljasakko-subtract" + num);
 			newElem.find(".kaljasakko-sum").attr("id", "kaljasakko-sum" + num).val("");
 			newElem.find(".kaljasakko-add").attr("id", "kaljasakko-add" + num);
+			newElem.find(".kaljasakko-reason-toggle").attr("id", "kaljasakko-reason-toggle" + num);
+			newElem.find(".kaljasakko-reason").attr("id", "kaljasakko-reason" + num);
 		} else {
 
 			_.debounce(putSakko, 1000, {
@@ -78,6 +80,38 @@ var url = window.location.href
 			})(url, i);
 		}
 	})
+
+	$(".kaljasakko-reason").blur(function() {
+
+		var i = $(this).parent().index();
+		var id = ($("#sakko" + i).attr('object-id'));
+
+		if(id != undefined) {
+
+			_.debounce(putSakko, 1000, {
+				'trailing': true,
+				'maxWait': 5000
+			})(url, id, i);
+		}
+
+		else {
+
+			_.debounce(postSakko, 1, {
+				'trailing': true,
+				'maxWait': 5000
+			})(url, i);
+		}
+
+	})
+
+	$(".kaljasakko-reason-toggle").click(function() {
+
+		var i = $(this).parent().index();
+
+		$("#kaljasakko-reason-toggle" + i).toggleClass("rotate-180");
+		$("#kaljasakko-reason" + i).slideToggle("fast");
+	});
+
 });
 
 /*AJAX calls*/
@@ -90,7 +124,8 @@ postSakko =
 		dataType: "json",
 		data: {
 			name: $("#kaljasakko-name" + i).val(),
-			amount: $("#kaljasakko-sum" + i).val()
+			amount: $("#kaljasakko-sum" + i).val(),
+			reason: $("#kaljasakko-reason" + i).val()
 		},
 		success: function(data, status) {
 			($("#sakko" + i).attr('object-id', data));
@@ -111,7 +146,8 @@ putSakko =
 		data: {
 			_id: id,
 			name: $("#kaljasakko-name" + i).val(),
-			amount: $("#kaljasakko-sum" + i).val()
+			amount: $("#kaljasakko-sum" + i).val(),
+			reason: $("#kaljasakko-reason" + i).val()
 		},
 		success: function(data, status) {
 			console.log(data);

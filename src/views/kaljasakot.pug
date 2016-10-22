@@ -11,10 +11,14 @@ body(id='bootstrap-override')
 						button(class='kaljasakko-subtract btn btn-danger' id="kaljasakko-subtract" + i) -
 						input(class='kaljasakko-sum form-control' id="kaljasakko-sum" + i type='text' disabled value=items[i].amount)
 						button(class='kaljasakko-add btn btn-success' id="kaljasakko-add" + i) +
+						span(class="glyphicon glyphicon-chevron-down kaljasakko-reason-toggle" id="kaljasakko-reason-toggle" + i)
+						textarea(class="kaljasakko-reason form-control" placeholder="Lisää sakon syyt.." id="kaljasakko-reason" + i) #{items[i].reason}
 				div(class='kaljasakko' id="sakko" + items.length)
 					input(class='kaljasakko-name form-control' id="kaljasakko-name" + items.length type='text' placeholder='Lisää nimi..')
 					button(class='kaljasakko-subtract btn btn-danger' id="kaljasakko-subtract" + items.length) -
 					input(class='kaljasakko-sum form-control' id="kaljasakko-sum" + items.length type='text' disabled placeholder=0)
 					button(class='kaljasakko-add btn btn-success' id="kaljasakko-add" + items.length) +
+					span(class="glyphicon glyphicon-chevron-down kaljasakko-reason-toggle" id="kaljasakko-reason-toggle" + items.length)
+					textarea(class="kaljasakko-reason form-control" placeholder="Lisää sakon syyt.." id="kaljasakko-reason" + items.length)
 		include includes/footer.pug
 		script(src="js/kaljasakot.js")

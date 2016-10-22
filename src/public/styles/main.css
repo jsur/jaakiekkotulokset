@@ -4,9 +4,13 @@
 	font-family: 'Raleway', sans-serif;
 }
 
+/*Element styles*/
+
 h1 {
 	text-align: center;
 }
+
+/*Class styles*/
 
 .scoreboard {
 	padding: 30px;
@@ -52,6 +56,8 @@ h1 {
 .slicknav_nav a {
   color: black !important;
 }
+
+/*Media queries*/
 
 @media (max-width: 768px) {
   

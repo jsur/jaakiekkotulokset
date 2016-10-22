@@ -4,7 +4,8 @@ var mongoose = require('mongoose');
 
 var kaljasakkoSchema = new mongoose.Schema({
 	name: String,
-	amount: Number
+	amount: Number,
+	reason: String
 });
 
 var model = mongoose.model('kaljasakko', kaljasakkoSchema);
