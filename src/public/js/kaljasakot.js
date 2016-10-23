@@ -2,8 +2,6 @@ $(function() {
 
 var url = window.location.href
 
-	$(".header-menu").slicknav({});
-
 /*Events*/
 
 	$(".kaljasakko-add").click(function(){

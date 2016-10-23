@@ -7,20 +7,28 @@ const _ = require('lodash');
 const Kaljasakko = require('../models/kaljasakko_collection.js');
 
 
+router.get('/', function(req, res) { 
+    Kaljasakko.collection.find().toArray(function(err, items) {
+        res.render('kaljasakot', { items: items }); 
+        })
+    });
+
 router.get('/sarjataulukko', function(req, res) {
-    dataservice.getFinhockeyData().then(function(data) {
+    dataservice.getFinhockeyStandingsData().then(function(data) {
     	var data1 = _.orderBy(data.teams, [function(o) { return parseInt(o.Ranking, 10); }], ['asc']); 
         res.render('index', { data1: data1 });
+    }).catch(function(err) {
+        res.render("<h1>Server error occurred. Please come again.</h1>");
+    });
+});
+
+router.get('/otteluohjelma', function(req, res){
+    dataservice.getFinhockeyGamesData().then(function(data) {
+        res.render('otteluohjelma', {data: data});
     }).catch(function(err) {
         res.render("<h1>Server error occurred. Please come again.</h1>")
     });
 });
-
-router.get('/', function(req, res) { 
-    Kaljasakko.collection.find().toArray(function(err, items) {
-        res.render('kaljasakot', { items: items });	
-        })
-    });
 
 router.post('/', function(req, res) {
     var kaljasakko = req.body;

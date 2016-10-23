@@ -1,6 +1,6 @@
 const http = require('http');
 
-getFinhockeyData = function() {
+getFinhockeyStandingsData = function() {
   return new Promise( (resolve, reject) => {
     http.get('http://tilastopalvelu.fi/ih/modules/mod_standings/helper/standings.php?statgroupid=3545', (res) => {
       var body = "";
@@ -17,4 +17,23 @@ getFinhockeyData = function() {
   });
 }
 
-module.exports.getFinhockeyData = getFinhockeyData;
+getFinhockeyGamesData = function() {
+  return new Promise( (resolve, reject) => {
+    http.get('http://www.tilastopalvelu.fi/ih/modules/mod_schedule/helper/games.php?statgroupid=3545', (res) => {
+      var body = "";
+
+      res.on('data', function(chunk) {
+        body += chunk;
+      });
+
+      res.on('end', function() {
+        resolve( JSON.parse(body) );
+      });
+
+    }).on('error', reject);
+  });
+}
+
+
+module.exports.getFinhockeyStandingsData = getFinhockeyStandingsData;
+module.exports.getFinhockeyGamesData = getFinhockeyGamesData;
