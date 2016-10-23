@@ -62,22 +62,29 @@ var url = window.location.href
 		var i = $(this).parent().index();
 		var id = ($("#sakko" + i).attr('object-id'));
 
-		if(id != undefined) {
+		if($("#kaljasakko-name" + i).val().length == 0) {
 
-//Here we use debounce because I wanted see how it works
+			console.log("Name empty, nothing done.")
 
-			_.debounce(putSakko, 1000, {
-				'trailing': true,
-				'maxWait': 5000
-			})(url, id, i);
-		}
+		} else {
 
-		else {
+			if(id != undefined) {
 
-			_.debounce(postSakko, 1, {
-				'trailing': true,
-				'maxWait': 5000
-			})(url, i);
+			//Here we use debounce because I wanted see how it works
+
+				_.debounce(putSakko, 1000, {
+					'trailing': true,
+					'maxWait': 5000
+				})(url, id, i);
+			}
+
+			else {
+
+				_.debounce(postSakko, 1, {
+					'trailing': true,
+					'maxWait': 5000
+				})(url, i);
+			}
 		}
 	})
 
@@ -107,8 +114,6 @@ var url = window.location.href
 	$(".kaljasakko-reason-toggle").click(function() {
 
 		var i = $(this).parent().index();
-
-		$("#kaljasakko-reason-toggle" + i).toggleClass("rotate-180");
 		$("#kaljasakko-reason" + i).slideToggle("fast");
 	});
 

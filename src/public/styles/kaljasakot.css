@@ -1,8 +1,9 @@
 /*Bootstrap overrides*/
 
 #bootstrap-override .kaljasakko-reason {
-	width: 90%;
 	display: none;
+	width: 65%;
+	margin-top: 5px;
 }
 
 /*Class styles*/
@@ -52,14 +53,9 @@
 }
 
 .kaljasakko-reason-toggle {
-	display: block;
-	padding: 5px;
-	font-size: 1.3em;
-	transition: transform .3s ease-in;
-}
-
-.kaljasakko-reason-toggle.rotate-180 {
-	transform: rotate(180deg);
+	display: inline-block;
+	padding: 10px 15px;
+	margin-left: 5px;
 }
 
 
@@ -82,6 +78,17 @@
 	
 	.kaljasakko-sum {
 		display: inline;
+	}
+
+	.kaljasakko-reason {
+		display: block;
+	}
+}
+
+@media (max-width: 450px) {
+
+	.kaljasakko-name {
+		max-width: 140px;
 	}
 }
 
