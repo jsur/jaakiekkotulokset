@@ -16,7 +16,7 @@ router.get('/', function(req, res) {
 router.get('/sarjataulukko', function(req, res) {
     dataservice.getFinhockeyStandingsData().then(function(data) {
     	var data1 = _.orderBy(data.teams, [function(o) { return parseInt(o.Ranking, 10); }], ['asc']); 
-        res.render('index', { data1: data1 });
+        res.render('sarjataulukko', { data1: data1 });
     }).catch(function(err) {
         res.render("<h1>Server error occurred. Please come again.</h1>");
     });

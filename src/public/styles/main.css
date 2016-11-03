@@ -12,9 +12,6 @@ h1 {
 
 /*Class styles*/
 
-.scoreboard {
-	padding-top: 30px;
-}
 
 .page-wrap {
   min-height: 70%;
@@ -50,7 +47,7 @@ h1 {
 }
 
 .slicknav_btn {
-  width: 100px;
+  width: 6em;
 }
 
 .slicknav_nav a {
@@ -65,9 +62,4 @@ h1 {
     padding: 0px !important;
   }
 
-  .scoreboard {
-    padding: 10px 0px 0px 0px;
-  }
-
 }
-

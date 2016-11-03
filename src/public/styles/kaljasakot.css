@@ -2,28 +2,36 @@
 
 #bootstrap-override .kaljasakko-reason {
 	display: none;
-	width: 90%;
 	margin-top: 5px;
 }
 
 /*Class styles*/
 
-.header-kaljasakot {
-	display: block;
-}
-
-.kaljasakot-list {
-	padding: 30px 60px;
-}
 
 .kaljasakot-list div {
 	padding-top: 10px;
 }
 
+.kaljasakko {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
 .kaljasakko-name {
-	max-width: 188px;
-	margin-right: 40px;
+	margin-right: 30px;
 	padding: 20px;
+	order: 1;
+}
+
+.kaljasakko-subtract {
+	padding: 10px 20px;
+	order: 2;
+}
+
+.kaljasakko-subtract:disabled {
+	background: #dddddd;
+	border-color: #dddddd;
 }
 
 .kaljasakko-sum {
@@ -32,6 +40,7 @@
 	margin-right: 5px;
 	font-weight: bold;
 	text-align: center;
+	order: 3;
 }
 
 .kaljasakko-sum:disabled {
@@ -39,49 +48,38 @@
 	padding: 20px;
 }
 
-.kaljasakko-subtract {
-	padding: 10px 20px;
-}
-
-.kaljasakko-subtract:disabled {
-	background: #dddddd;
-	border-color: #dddddd;
-}
-
 .kaljasakko-add {
 	padding: 10px 20px;
+	order: 4;
 }
+
 
 .kaljasakko-reason-toggle {
-	display: inline-block;
 	padding: 10px 15px;
 	margin-left: 5px;
+	order: 5;
 }
 
+.kaljasakko-reason {
+	order: 6;
+	flex: 0 0 90%;
+}
 
 /*Media queries*/
 
 @media (max-width: 768px) {
 
-	.container-fluid {
-		padding: 0px;
-	}
-
 	.kaljasakot-list {
-		padding: 0px;
+		padding: 0;
 	}
 
 	.kaljasakko-name {
-		display: inline;
+		max-width: 150px;
 		margin: 0px 5px 0px 0px;
 	}
 	
 	.kaljasakko-sum {
 		display: inline;
-	}
-
-	.kaljasakko-reason {
-		display: block;
 	}
 }
 
