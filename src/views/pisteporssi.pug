@@ -1,0 +1,27 @@
+include includes/header.pug
+h1 Pistepörssi
+body(id='bootstrap-override')
+	div(class='container-fluid')
+		div(class='statistics')
+			table(class='table table-striped table-responsive')
+				thead
+					tr
+						th #
+						th Nimi
+						th Joukkue
+						th O
+						th M
+						th S
+						th P
+				tbody
+					each value, i in data1
+						tr
+							td #{i + 1}
+							td #{data1[i].PlayerName}
+							td #{data1[i].TeamName}
+							td #{data1[i].Games}
+							td #{data1[i].Goals}
+							td #{data1[i].Assists}
+							td #{data1[i].Points}
+	include includes/footer.pug
+	script(src="js/main.js")
