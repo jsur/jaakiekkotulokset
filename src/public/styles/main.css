@@ -41,19 +41,6 @@ h1 {
   height: 80px;
 }
 
-.slicknav_menu {
-  float: right;
-  background: white !important;
-}
-
-.slicknav_btn {
-  width: 6em;
-}
-
-.slicknav_nav a {
-  color: black !important;
-}
-
 /*Media queries*/
 
 @media (max-width: 768px) {

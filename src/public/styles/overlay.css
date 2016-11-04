@@ -46,6 +46,7 @@
     float: right;
     font-size: 3em;
     padding-right: 0.25em;
+    cursor: pointer;
 }
 
 @media screen and (max-height: 450px) {
