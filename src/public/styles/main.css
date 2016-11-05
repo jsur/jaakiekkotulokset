@@ -72,3 +72,23 @@ h1 {
     font-size: 0.82em;
   }
 }
+
+/*LG G4*/
+@media only screen and (max-width : 360px) {
+  .container-fluid td {
+    font-size: 0.74em;
+  }
+  .container-fluid th {
+    font-size: 0.80em;
+  }
+}
+
+/*iPhone 5 and down*/
+@media only screen and (max-width : 320px) {
+  .container-fluid td {
+    font-size: 0.65em;
+  }
+  .container-fluid th {
+    font-size: 0.73em;
+  }
+}
