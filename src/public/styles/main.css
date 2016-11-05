@@ -41,6 +41,10 @@ h1 {
   height: 80px;
 }
 
+#filter {
+  margin-bottom: 10px;
+}
+
 /*Media queries*/
 
 @media (max-width: 768px) {
@@ -50,3 +54,13 @@ h1 {
   }
 
 }
+
+@media only screen and (max-width : 480px) {
+  .container-fluid td {
+    font-size: 0.9em;
+  }
+  .container-fluid th {
+    font-size: 0.95em;
+  }
+}
+
