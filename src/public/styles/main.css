@@ -64,3 +64,11 @@ h1 {
   }
 }
 
+@media only screen and (max-width : 390px) {
+  .container-fluid td {
+    font-size: 0.79em;
+  }
+  .container-fluid th {
+    font-size: 0.82em;
+  }
+}
