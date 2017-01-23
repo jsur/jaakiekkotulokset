@@ -2,7 +2,7 @@ const http = require('http');
 
 getFinhockeyStandingsData = function() {
   return new Promise( (resolve, reject) => {
-    http.get('http://tilastopalvelu.fi/ih/modules/mod_standings/helper/standings.php?statgroupid=3545', (res) => {
+    http.get('http://tilastopalvelu.fi/ih/beta/tilastointi/modules/mod_standings/helper/standings.php?statgroupid=4719', (res) => {
       var body = "";
 
       res.on('data', function(chunk) {
@@ -19,7 +19,7 @@ getFinhockeyStandingsData = function() {
 
 getFinhockeyGamesData = function() {
   return new Promise( (resolve, reject) => {
-    http.get('http://www.tilastopalvelu.fi/ih/modules/mod_schedule/helper/games.php?statgroupid=3545', (res) => {
+    http.get('http://www.tilastopalvelu.fi/ih/modules/mod_schedule/helper/games.php?statgroupid=4719', (res) => {
       var body = "";
 
       res.on('data', function(chunk) {
@@ -36,7 +36,7 @@ getFinhockeyGamesData = function() {
 
 getFinhockeyPlayerStatisticsData = function() {
   return new Promise( (resolve, reject) => {
-    http.get('http://www.tilastopalvelu.fi/ih/modules/mod_statisticsplayers/helper/statistics.php?statgroupid=3545', (res) => {
+    http.get('http://www.tilastopalvelu.fi/ih/modules/mod_statisticsplayers/helper/statistics.php?statgroupid=4719', (res) => {
       var body = "";
 
       res.on('data', function(chunk) {
