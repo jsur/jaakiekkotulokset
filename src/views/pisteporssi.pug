@@ -19,10 +19,10 @@ body(id='bootstrap-override')
 						tr
 							td #{i + 1}
 							td #{data1[i].PlayerName}
-							td #{data1[i].TeamName}
-							td #{data1[i].Games}
-							td #{data1[i].Goals}
-							td #{data1[i].Assists}
-							td #{data1[i].Points}
+							td #{data1[i].PlayerTeams[0].TeamName}
+							td #{data1[i].PlayerGames}
+							td #{data1[i].PlayerGoals}
+							td #{data1[i].PlayerAssists}
+							td #{data1[i].PlayerPoints}
 	include includes/footer.pug
 	script(src="js/main.js")

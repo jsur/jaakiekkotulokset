@@ -2,7 +2,7 @@ const http = require('http');
 
 getFinhockeyStandingsData = function() {
   return new Promise( (resolve, reject) => {
-    http.get('http://tilastopalvelu.fi/ih/beta/tilastointi/modules/mod_standings/helper/standings.php?statgroupid=4719', (res) => {
+    http.get('http://www.tilastopalvelu.fi/ih/beta/tilastointi/modules/mod_advstandings/helper/getstandings.php?type=0&stgid=4719&season=&winpoints=0&advancedfilters=;;;;;&advancedtype=TeamPoints&advancedsortorder=DESC&advancedsortterm=TeamPoints', (res) => {
       var body = "";
 
       res.on('data', function(chunk) {
@@ -19,7 +19,7 @@ getFinhockeyStandingsData = function() {
 
 getFinhockeyGamesData = function() {
   return new Promise( (resolve, reject) => {
-    http.get('http://www.tilastopalvelu.fi/ih/modules/mod_schedule/helper/games.php?statgroupid=4719', (res) => {
+    http.get('http://www.tilastopalvelu.fi/ih/beta/tilastointi/modules/mod_seriegameschedule/helper/getgames.php?stgid=4719&levelid=68&type=1&teamid=&season=', (res) => {
       var body = "";
 
       res.on('data', function(chunk) {
@@ -36,7 +36,7 @@ getFinhockeyGamesData = function() {
 
 getFinhockeyPlayerStatisticsData = function() {
   return new Promise( (resolve, reject) => {
-    http.get('http://www.tilastopalvelu.fi/ih/modules/mod_statisticsplayers/helper/statistics.php?statgroupid=4719', (res) => {
+    http.get('http://www.tilastopalvelu.fi/ih/beta/tilastointi/modules/mod_playerstats/helper/getplayerstats.php?stgid=4719&season=&filters=;0;0;;;&advancedfilters=;0;0;;;&type=0&length=0&advancedlength=10&sortorder=DESC&sortterm=PlayerPoints&advancedtype=&advancedsortorder=DESC&advancedsortterm=', (res) => {
       var body = "";
 
       res.on('data', function(chunk) {

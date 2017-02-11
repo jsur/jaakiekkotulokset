@@ -20,11 +20,14 @@ body(id='bootstrap-override')
 							- var str2 = data.games[i].GameTime
 							- var gameDate = str.substr(0,5);
 							- var gameTime = str2.substr(0,5);
+							- var homeGoals = data.games[i].HomeGoals
+							- var awayGoals = data.games[i].AwayGoals
+							- var result = homeGoals + ' - ' + awayGoals
 							td= gameDate 
 							td= gameTime
 							td #{data.games[i].RinkName}
 							td #{data.games[i].HomeTeamName}
 							td #{data.games[i].AwayTeamName}
-							td #{data.games[i].Result}
+							td= result
 	include includes/footer.pug
 	script(src="js/main.js")

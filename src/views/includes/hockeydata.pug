@@ -14,14 +14,17 @@ div(class='scoreboard')
 				th P
 		tbody
 			each value, i in data1
+				- var goalsFor = data1[i].TeamGoalsFor
+				- var goalsAgainst = data1[i].TeamGoalsAgainst
+				- var goalDiff = goalsFor - goalsAgainst
 				tr 
-					td #{data1[i].Ranking}
+					td #{data1[i].RankingOrder}
 					td #{data1[i].TeamName}
-					td #{data1[i].Games}
-					td #{data1[i].Wins}
-					td #{data1[i].Ties}
-					td #{data1[i].Looses}
-					td #{data1[i].GoalsFor}
-					td #{data1[i].GoalsAgainst}
-					td #{data1[i].GoalDiff}
-					td #{data1[i].Points}
+					td #{data1[i].TeamGames}
+					td #{data1[i].TeamWins}
+					td #{data1[i].TeamTies}
+					td #{data1[i].TeamLosses}
+					td #{data1[i].TeamGoalsFor}
+					td #{data1[i].TeamGoalsAgainst}
+					td= goalDiff
+					td #{data1[i].TeamPoints}

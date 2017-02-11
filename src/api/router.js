@@ -17,7 +17,7 @@ router.get('/', function(req, res) {
 
 router.get('/sarjataulukko', function(req, res) {
     dataservice.getFinhockeyStandingsData().then(function(data) {
-    	var data1 = _.orderBy(data.teams, [function(o) { return parseInt(o.Ranking, 10); }], ['asc']); 
+    	var data1 = _.orderBy(data[0].standings, [function(o) { return parseInt(o.RankingOrder, 10); }], ['asc']); 
         res.render('sarjataulukko', { data1: data1 });
     }).catch(function(err) {
         res.render(errormessage);
@@ -34,7 +34,8 @@ router.get('/otteluohjelma', function(req, res){
 
 router.get('/pisteporssi', function(req, res){
     dataservice.getFinhockeyPlayerStatisticsData().then(function(data) {
-        var data1 = _.orderBy(data.players, [function(o) { return parseInt(o.Points, 10); }], ['desc']); 
+        var data1 = _.orderBy(data[0].stats, [function(o) { return parseInt(o.PlayerPoints, 10); }], ['desc']); 
+        console.log(data1);
         res.render('pisteporssi', {data1: data1});
     }).catch(function(err) {
         res.render(errormessage)
